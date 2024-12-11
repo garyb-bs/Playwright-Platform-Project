@@ -42,7 +42,7 @@ test('The wrong password was entered', async ({ page } : { page:any }) => {
   await page.locator("#loginButton").click();
 
   await page.locator("#username").fill(username);
-  await page.locator("#password").fill(password);
+  await page.locator("#password").fill(wrongPassword);
   await page.locator("#submit").click();
 
   // Expect a title "to contain" a substring.
