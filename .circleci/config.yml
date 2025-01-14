@@ -3,6 +3,7 @@ orbs:
   node: circleci/node@5.0.2
   heroku: circleci/heroku@1.2.6
   slack: circleci/slack@4.12.5
+  percy: percy/agent@volatile
 
 jobs:
   test: # this can be any name you want
