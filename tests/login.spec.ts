@@ -33,7 +33,7 @@ test('The wrong username was entered', async ({ page } : { page:any }) => {
   await page.locator("#submit").click();
 
   // Expect a title "to contain" a substring.
-  await expect(page.locator("#message")).toHaveText(wrongUsernameText);
+  await expect(page.locator("#error")).toHaveText(wrongUsernameText);
 });
 
 test('The wrong password was entered', async ({ page } : { page:any }) => {
@@ -44,5 +44,5 @@ test('The wrong password was entered', async ({ page } : { page:any }) => {
   await page.locator("#submit").click();
 
   // Expect a title "to contain" a substring.
-  await expect(page.locator("#message")).toHaveText(wrongPasswordText);
+  await expect(page.locator("#error")).toHaveText(wrongPasswordText);
 });
