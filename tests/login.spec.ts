@@ -11,6 +11,7 @@ var wrongUsernameText = "Your username is invalid!";
 var wrongPasswordText = "Your password is invalid!";
 
 test('A successful login was performed', async ({ page } : { page:any }) => {
+  console.log(`[[PROPERTY|id=TC-787985]]`);
   await page.goto('https://practicetestautomation.com/practice-test-login/');
 
   await percySnapshot(page, 'Login Page');
@@ -26,6 +27,7 @@ test('A successful login was performed', async ({ page } : { page:any }) => {
 });
 
 test('The wrong username was entered', async ({ page } : { page:any }) => {
+  console.log(`[[PROPERTY|id=TC-787987]]`);
   await page.goto('https://practicetestautomation.com/practice-test-login/');
 
   await page.locator("#username").fill(wrongUsername);
@@ -37,6 +39,7 @@ test('The wrong username was entered', async ({ page } : { page:any }) => {
 });
 
 test('The wrong password was entered', async ({ page } : { page:any }) => {
+  console.log(`[[PROPERTY|id=TC-787986]]`);
   await page.goto('https://practicetestautomation.com/practice-test-login/');
 
   await page.locator("#username").fill(username);
