@@ -55,7 +55,7 @@ jobs:
               }
 
 workflows:
-  adobe-pr-smoke-test:
+  hyatt-demo-test:
     jobs:
       - test
       - notify:
