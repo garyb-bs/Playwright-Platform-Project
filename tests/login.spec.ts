@@ -20,7 +20,7 @@ test('A successful login was performed', async ({ page } : { page:any }) => {
   await page.locator("#submit").click();
 
   // Expect a title "to contain" a substring.
-  await expect(page.url()).toHaveText("logged-in-successfully");
+  await expect(page).toHaveURL("https://practicetestautomation.com/logged-in-successfully/");
 
   await percySnapshot(page, 'Login Successful');
 });
