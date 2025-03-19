@@ -7,9 +7,8 @@ var username = "student";
 var wrongUsername = "wrongStudent";
 var password = "Password123";
 var wrongPassword = "Password321";
-var wrongUsernameText = "Incorrect username!";
-var wrongPasswordText = "Incorrect password!";
-var wrongUsernameAndPasswordText = "Incorrect username and password!";
+var wrongUsernameText = "Your username is invalid!";
+var wrongPasswordText = "Your password is invalid!";
 
 test('A successful login was performed', async ({ page } : { page:any }) => {
   await page.goto('https://practicetestautomation.com/practice-test-login/');
@@ -21,7 +20,7 @@ test('A successful login was performed', async ({ page } : { page:any }) => {
   await page.locator("#submit").click();
 
   // Expect a title "to contain" a substring.
-  await expect(page.locator("#message")).toHaveText("Login successful!");
+  await expect(page.url()).toHaveText("logged-in-successfully");
 
   await percySnapshot(page, 'Login Successful');
 });
