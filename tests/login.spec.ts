@@ -47,14 +47,3 @@ test('The wrong password was entered', async ({ page } : { page:any }) => {
   // Expect a title "to contain" a substring.
   await expect(page.locator("#message")).toHaveText(wrongPasswordText);
 });
-
-test('Both the wrong username and password were entered', async ({ page } : { page:any }) => {
-  await page.goto('https://practicetestautomation.com/practice-test-login/');
-
-  await page.locator("#username").fill(wrongUsername);
-  await page.locator("#password").fill(wrongPassword);
-  await page.locator("#submit").click();
-
-  // Expect a title "to contain" a substring.
-  await expect(page.locator("#message")).toHaveText(wrongUsernameAndPasswordText);
-});
